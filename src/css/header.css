@@ -1,0 +1,57 @@
+header {
+    display: flex;
+    align-items: stretch;  
+    justify-content: center;
+    background-color: blue;
+    padding: 0 2%;
+}
+
+/* Images sur les côtés */
+#home {
+    display: block; 
+    width: 7em;
+}
+
+#moon {
+    display: block;
+    width: 7em;
+}
+
+/* NavBar */
+
+nav {
+    background-color: aquamarine;
+    width: 80%;
+    margin: 0% 5%;
+    padding: 0% 5%;
+    display: flex;
+    align-items: stretch;  
+    justify-content: space-around;
+}
+
+nav > div {
+    flex: 1;
+    background-color: bisque;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.sousMenu {
+    position: absolute;
+    background-color: chartreuse;
+    top: 100%;
+    width: 100%;
+    /* display: none; */
+}
+
+.sousMenu > div {
+    height: 2em;
+    align-content: center;
+}
+
+.sousMenu > div > a{
+    display: flex;
+    justify-content: center;
+}

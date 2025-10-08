@@ -1,0 +1,13 @@
+@font-face {
+  font-family: myFont;
+  src: url(../font/ALTRONED_Trial.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "myFont", "Arial", "sans-serif";
+}
