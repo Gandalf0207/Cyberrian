@@ -1,4 +1,7 @@
 header {
+    position: sticky;
+    padding-top: 1em ;
+    padding-left: 0.5em;
     display: flex;
     white-space:nowrap ;
 }
@@ -26,6 +29,10 @@ nav > div {
     align-items: center;
 }
 
+nav a {
+    color: aquamarine;
+}
+
 /* Effet cascade avec délai progressif */
 
 /* On vide les div principales */
@@ -38,16 +45,16 @@ nav > div:nth-child(5) {
 }
 
 nav > div:nth-child(2) {
-    left: -4px;
+    left: -2px;
 }
 nav > div:nth-child(3) {
-    left: -8px;
+    left: -4px;
 }
 nav > div:nth-child(4) {
-    left: -12px;
+    left: -6px;
 }
 nav > div:nth-child(5) {
-    left: -16px;
+    left: -8px;
 }
 /* On déplace tout sur des ::before */
 nav > div:nth-child(1)::before,
@@ -62,36 +69,62 @@ nav > div:nth-child(5)::before {
     width: 100%;
     height: 100%;
     z-index: -1;
+    background-color: #1a2840;
+    clip-path: polygon(1% 2%, 95% 2%, 95% 20%, 99% 30%, 99% 70%, 95% 80%, 95% 98%, 1% 98%, 1% 80%, 5% 70%, 5% 30%, 1% 20%);
     pointer-events: none;
 }
 
 nav > div:nth-child(1)::before {
-    background-color: rgb(165, 21, 21);
-    clip-path: polygon(96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 10% 100%, 0 70%, 0 0);
-}
-
-nav > div:nth-child(2)::before {
-    background-color: rgb(92, 23, 23); 
-    clip-path: polygon(0 0, 96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
-}
-
-nav > div:nth-child(3)::before {
-    background-color: rgb(185, 49, 49);
-    clip-path: polygon(0 0, 96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
-}
-
-nav > div:nth-child(4)::before {
-    background-color: rgb(196, 177, 177);
-    clip-path: polygon(0 0, 96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
+    background-color: #0a1628;
+    clip-path: polygon(95% 2%, 95% 20%, 99% 30%, 99% 70%, 95% 80%, 95% 98%, 10% 96%, 1% 70%, 1% 2%);
 }
 
 nav > div:nth-child(5)::before {
-    background-color: rgb(20, 168, 161);
+    clip-path: polygon(1% 2%, 99% 2%, 99% 70%, 90% 97%, 1% 97%, 1% 80%, 5% 70%, 5% 30%, 1% 20%);
+}
+
+
+
+/* Appliquer la fausse bordure sur chaque div de la navbar */
+nav > div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Derrière le ::before */
+    background: #0080ff; /* Couleur de la bordure */
+    clip-path: polygon(0 0, 96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
+}
+
+/* Tu peux personnaliser les formes si elles diffèrent par div */
+nav > div:nth-child(1)::after {
+    clip-path: polygon(96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 10% 100%, 0 70%, 0 0);
+}
+
+nav > div:nth-child(5)::after {
     clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
 }
 
+nav > div:hover::before{
+    background-color: #0a1628;
+}
+
+nav > div:hover::after{
+    background-color: #00d9ff;
+}
+
+
+
+
+
+
+
+
 .sousMenu {
     position: absolute;
+    padding-top: 2px;
     top: 100%;
     left: 0;
     width: 100%;
@@ -104,9 +137,41 @@ nav > div:nth-child(5)::before {
     transform: translateX(-30px);
     margin-bottom: 8px;
     position: relative;
-    background-color: blue;
-    clip-path: polygon(15% 100%, 0 100%, 0 0, 100% 0, 100% 65%, 92% 100%, 30% 100%, 30% 92%, 15% 92%);
 }
+
+.sousMenu > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Derrière le ::before */
+    background-color: #1a2840;
+    clip-path: polygon(6% 98%, 1% 98%, 1% 4%, 99% 4%, 99% 63%, 91% 96%, 15% 96%, 15% 90%, 6% 90%);
+}
+
+.sousMenu > div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Derrière le ::before */
+    background-color: #642c5d;
+    clip-path: polygon(7% 100%, 0 100%, 0 0, 100% 0, 100% 65%, 92% 100%, 14% 100%, 14% 92%, 7% 92%);
+}
+
+.sousMenu > div:hover::before {
+    background-color: #0a1628;
+}
+
+.sousMenu > div:hover::after {
+    background-color: #ff0080;
+}
+
+
 
 .sousMenu > div > a {
     display: flex;
@@ -114,6 +179,7 @@ nav > div:nth-child(5)::before {
     align-items: center;
     height: 100%;
     text-decoration: none;
+    font-size: 75%;
 }
 
 nav > div:hover .sousMenu {
@@ -159,3 +225,4 @@ nav > div:hover .sousMenu > div:nth-child(5) {
 nav > div:hover .sousMenu > div:nth-child(6) {
     animation-delay: 0.40s;
 }
+
