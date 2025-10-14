@@ -1,0 +1,15 @@
+@font-face {
+  font-family: textFont;
+  src: url(../font/Rochester-Regular.ttf);
+}
+main h1 {color:#ff3300}
+main h2 {color:#0080ff}
+main h3 {color: #ff0080}
+main div {
+    color: #ff6b00;
+    font-family: "textFont", "Arial", "sans-serif";
+}
+main p {
+    color: #00d9ff;
+    font-family: "textFont", "Arial", "sans-serif";
+}
