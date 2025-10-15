@@ -1,7 +1,18 @@
-main > article {
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    z-index: 0;
+}
+
+main > article >  div {
+    margin: 1em;
+}
+
+.box{
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
     overflow: hidden; /* Évite que les formes dépassent */
@@ -10,28 +21,48 @@ main > article {
     z-index: -3;
 }
 
-main > article::before {
+.box::before {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1; /* Derrière le ::before */
     background-color: #0a1628;
-    clip-path: polygon(97% 2%, 99.5% 20%, 99.5% 97%, 3.5% 98%, 0.5% 80%, 0.5% 2%);
+    clip-path: polygon(97% 1%, 99.5% 20%, 99.5% 99%, 3.5% 99%, 0.5% 80%, 0.5% 1%);
+
 }
-main > article::after {
+.box::after {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 0; /*  Derrière le ::before */
     background-color: #0080ff;
-    clip-path: polygon(97% 0, 100% 20%, 100% 100%, 3% 100%, 0 80%, 0 0);
+    clip-path: polygon(97.4% 0, 100% 20%, 100% 100%, 3% 100%, 0 80%, 0 0);
 }
-main h3, main p, main a {
+
+.box h3{
     position: relative; /* S’assure que le texte est au-dessus du clip */
     z-index: 10;
     color: white;
-    margin: 2em;
+    margin-left: 2em;
+    margin-top: 1em;
 }
-#imageHotel
+
+.box p{
+    position: relative; /* S’assure que le texte est au-dessus du clip */
+    z-index: 10;
+    color: white;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.image{
+    position: relative;
+    width: 27%;
+    Z-index: 10;
+    margin: 2em;
+
+}
+
+

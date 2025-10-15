@@ -5,6 +5,7 @@ header {
     padding-left: 0.5em;
     display: flex;
     white-space:nowrap ;
+    z-index: 1;
 }
 
 /* NavBar */
