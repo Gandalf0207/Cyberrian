@@ -341,8 +341,11 @@ footer > div {
 
 main {
     margin: 5em;
-  flex: 1;
-  font-family: "textMain", "Arial", "sans-serif";
+    flex: 1;
+    font-family: "textMain", "Arial", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
 }
 
 .section {
@@ -352,6 +355,14 @@ main {
     color: aliceblue;
     z-index: 0;
     gap: 5em;
+}
+
+.separateur {
+    display: block;
+    position: relative;
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
 }
 
 
