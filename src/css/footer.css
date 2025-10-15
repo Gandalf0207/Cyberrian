@@ -48,21 +48,17 @@ footer > article::after {
 
 
 footer > article > div {
+    display: flex;
+    flex-direction: column;
     margin: 2em;
+    justify-content: flex-start;
+    padding: 1em;
+    white-space:nowrap ;
+
 }
-
-
 
 footer h3 {
     padding-bottom: 1em;
-}
-
-#InfosFooter {
-    padding: 1em;
-}
-
-#ContactFooter {
-    padding: 1em;
 }
 
 #ContactFooter > div {
