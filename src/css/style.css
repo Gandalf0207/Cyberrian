@@ -607,7 +607,7 @@ h2 {
 
 /* text home glitch, code source : https://www.codingnepalweb.com/text-glitch-effect-html-css/ */
 #titlePage{
-  width: 100%;
+  width: 99%;
   height: 100%;
   display: flex;
   justify-content: center;
