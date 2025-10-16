@@ -480,8 +480,6 @@ main {
     z-index: 1;
 }
 
-
-
 .textDivCard {
     display: flex;
     flex-direction: column;
@@ -503,8 +501,50 @@ main {
     text-align: justify;
 }
 
+/* -----------------------------------------------------------------Section 2--------------------- */
+
+/* Section 1 : élément communs */
+
+#section3 {
+        flex-direction: column;
+}
+
+.artSec3 {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.artSec3::before {
+    background-color: #0a1628;
+    clip-path: polygon(97% 2%, 99.5% 20%, 99.5% 97%, 3.5% 98%, 0.5% 80%, 0.5% 2%);
+}
+.artSec3::after {
+    background-color: #00d9ff;
+    clip-path: polygon(97% 0, 100% 20%, 100% 100%, 3% 100%, 0 80%, 0 0);
+}
+
+.S3artTextDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    line-height: 1.5;
+}
 
 
+/* --- Article 6 à 10-- */
+
+#imgart4,
+#imgart5,
+#imgart6,
+#imgart7,
+#imgart8 {
+    margin: 2em;
+    display: block;
+    width: 20%;
+    height: 15%;
+    clip-path: polygon(80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%, 0 0);   
+}
 
 
 
