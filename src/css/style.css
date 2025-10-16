@@ -300,7 +300,6 @@ footer > div {
 }
 
 #footer > div {
-    white-space: nowrap;
     margin: 2em;
     padding: 1em;
 }
