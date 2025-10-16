@@ -1,10 +1,26 @@
 @font-face {
   font-family: textFont;
-  src: url(../font/Rochester-Regular.ttf);
+  src: url(../font/SpaceMono-Regular.ttf);
 }
-main h1 {color:#ff3300}
-main h2 {color:#0080ff}
-main h3 {color: #ff0080}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+    color:#ff3300;
+    margin: 0 0 20px 50px;
+}
+main h2 {
+    color:#0080ff;
+    margin: 20px 0 20px 50px;
+  }
+main h3 {
+    color: #ff0080;
+    margin: 0 50px 0 50px;
+}
 main div {
     color: #ff6b00;
     font-family: "textFont", "Arial", "sans-serif";
@@ -12,4 +28,45 @@ main div {
 main p {
     color: #00d9ff;
     font-family: "textFont", "Arial", "sans-serif";
+    margin: 0 50px 0 50px;
+}
+
+.separateur {
+    margin: 50px 0 50px 0;
+}
+
+.impair {
+    float: left;
+    height: 300px;
+    margin: 20px 5px 50px 50px;
+    border: solid;
+    justify-content: center;
+}
+.pair {
+    float: left;
+    height: 300px;
+    margin: 20px 50px 50px 5px;
+    border: solid;
+    justify-content: center;
+}
+
+.Salles {
+    display: flex;
+    flex-direction: column;
+}
+.textpair {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+}
+.textimpair {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+.contener {
+    display:flex;
+    flex-direction: row;
 }
