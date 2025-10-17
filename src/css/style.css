@@ -396,6 +396,14 @@ h2 {
 
 /* Section 1 : élément communs */
 
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    margin: 2em;
+}
+
 .artSec1 {
     display: flex;
     position: relative;
@@ -458,14 +466,6 @@ h2 {
 
 
 /* -----------------------------------------------------------------Section 2--------------------- */
-
-.container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: space-around;
-    margin: 2em;
-}
 
 .card {
     display: flex;
@@ -552,9 +552,8 @@ h2 {
     text-align: justify;
 }
 
-/* -----------------------------------------------------------------Section 2--------------------- */
+/* -----------------------------------------------------------------Section 3--------------------- */
 
-/* Section 1 : élément communs */
 
 #section3 {
     flex-direction: column;
@@ -598,7 +597,33 @@ h2 {
 }
 
 
+/* -----------------------------------------------------------------Section 4--------------------- */
 
+.artSec4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  margin: 2em;
+}
+
+.artSec4::before {
+    background-color: #0a1628;
+    clip-path: polygon(97% 2%, 99.5% 20%, 99.5% 97%, 3.5% 98%, 0.5% 80%, 0.5% 2%);
+}
+
+.artSec4::after {
+    background-color: #FFD700;
+    clip-path: polygon(97% 0, 100% 20%, 100% 100%, 3% 100%, 0 80%, 0 0);
+}
+
+.imgGroupe {
+  margin: 2em;
+    display: block;
+    width: 50%;
+    height: 50%;
+    clip-path: polygon(90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%, 0 0);
+}
 
 
 /* ------------------------ FIN MAIN------------------------- */
