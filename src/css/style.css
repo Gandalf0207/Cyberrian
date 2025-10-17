@@ -1,11 +1,11 @@
 /* ----------------TOOL BOX ---------------- */
 @font-face {
-  font-family: myFont;
+  font-family: ALTRONED;
   src: url(../font/ALTRONED_Trial.otf);
 }
 
 @font-face {
-  font-family: textMain;
+  font-family: Roboto;
   src: url(../font/Roboto.ttf);
 }
 
@@ -42,7 +42,7 @@ header {
     display: flex;
     white-space:nowrap ;
     z-index: 1;
-    font-family: "myFont", "Arial", "sans-serif";
+    font-family: "ALTRONED", "Arial", "sans-serif";
 }
 
 /* NavBar */
@@ -72,14 +72,14 @@ nav a {
     color: aquamarine;
 }
 
-/* Effet cascade avec délai progressif */
-
 
 /*  element réutilisables */
 .boxType {
 background-color: transparent;
 }
 
+
+/* element before et after pour les contours et bcg des box */
 .boxType::before {
     content: "";
     position: absolute;
@@ -96,7 +96,7 @@ background-color: transparent;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -2; /* Derrière le ::before */
+    z-index: -2;
     pointer-events: none;
 
 
@@ -105,17 +105,14 @@ background-color: transparent;
 /* fin box base */
 
 
-
-
-
 /* custom box menu nav */
-.menu::before {
+.menu::before { /* bcg color */
     background-color: #1a2840;
     clip-path: polygon(1% 2%, 95% 2%, 95% 20%, 99% 30%, 99% 70%, 95% 80%, 95% 98%, 1% 98%, 1% 80%, 5% 70%, 5% 30%, 1% 20%);
 }
 
-.menu::after {
-    background: #0080ff; /* Couleur de la bordure */
+.menu::after { /* border color */
+    background: #0080ff;
     clip-path: polygon(0 0, 96% 0, 96% 20%, 100% 30%, 100% 70%, 96% 80%, 96% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
 }
 
@@ -160,7 +157,6 @@ background-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 80%, 4% 70%, 4% 30%, 0 20%);
 }
 
-/* fin custom box menu nav */
 
 /* custom box sous menu nav */
 
@@ -200,7 +196,7 @@ background-color: transparent;
 
 /* fin custom box sous menu nav */
 
-/* elemnts des sous menu */
+/* elements des sous menu */
 
 .sousMenuElement > a {
     display: flex;
@@ -215,6 +211,7 @@ nav > div:hover .sousMenu {
     display: block;
 }
 
+/* animations d'apparition en décalé */
 nav > div:hover .sousMenuElement {
     animation: slideIn 0.4s forwards;
 }
@@ -265,7 +262,7 @@ footer {
     width: 100%;
     background-color: #ff6b00;
     flex-direction: column;
-    font-family: "myFont", "Arial", "sans-serif";
+    font-family: "ALTRONED", "Arial", "sans-serif";
 
 }
 
@@ -327,7 +324,7 @@ footer > div {
 }
 
 #footer h3, #footer p, #footer a {
-    position: relative; /* S’assure que le texte est au-dessus du clip */
+    position: relative;
     z-index: 10;
     color: white;
 }
@@ -341,7 +338,7 @@ footer > div {
 main {
     margin: 5em;
     flex: 1;
-    font-family: "textMain", "Arial", "sans-serif";
+    font-family: "Roboto", "Arial", "sans-serif";
     display: flex;
     flex-direction: column;
     gap: 10em;
@@ -371,7 +368,7 @@ main {
 h2 {
     font-size: 100px;
     text-align: center;
-    font-family: "textMain", "Arial", "sans-serif";
+    font-family: "Roboto", "Arial", "sans-serif";
     letter-spacing:10px;
 }
 
@@ -526,7 +523,7 @@ h2 {
 }
 
 .portrait::after {
-    background: #ff006e; /* Couleur de la bordure */
+    background: #ff006e; 
     clip-path: polygon(10% 3%, 82% 3%, 86% 3%, 92% 3%, 95% 6%, 95% 23%, 100% 26%, 100% 47%, 95% 50%, 95% 68%, 100% 71%, 100% 82%, 95% 85%, 95% 93%, 92% 97%, 85% 97%, 82% 100%, 18% 100%, 15% 97%, 8% 97%, 5% 93%, 5% 85%, 0% 82%, 0% 71%, 5% 68%, 5% 50%, 0% 47%, 0% 26%, 5% 23%, 5% 6%);
     z-index: 1;
 }
@@ -652,7 +649,7 @@ h2 {
   padding: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "myFont";
+  font-family: "ALTRONED";
 }
 #titlePage #texth1:before,
 #titlePage #texth1:after {
